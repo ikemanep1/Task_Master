@@ -1,17 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-const Header = () => {
+const Header = ({ title }) => {
     return (
         <View style={styles.header}>
-            <Text style={styles.text}>Ike's task manager</Text>
+            <Text style={styles.text}>{title}</Text>
         </View>
     );
 }
 
+Header.defaultProps = {
+    title: "Ike's task manager"
+}
+
 const styles = StyleSheet.create({
     header: {
-        height: 60,
+        height: 120,
         padding: 15,
         backgroundColor: '#ffc312',
         borderBottomColor: '#ffd966',
@@ -21,7 +25,8 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         textAlign: 'center',
         fontSize: 30,
-        fontFamily: 'fantasy'
+        fontFamily: 'fantasy',
+        paddingTop: 60
 
     }
 })
