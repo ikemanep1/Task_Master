@@ -7,10 +7,6 @@ import { uuid } from 'uuidv4';
 
 const App = () => {
   const [items, setItems] = useState([
-    { id: uuid(), text: 'complete this task' },
-    { id: uuid(), text: 'complete this task' },
-    { id: uuid(), text: 'complete this task' },
-    { id: uuid(), text: 'complete this task' },
   ]);
 
   const deleteItem = (id) => {
@@ -36,7 +32,9 @@ const App = () => {
       <FlatList
         data={items}
         renderItem={({ item }) => (
-          <ListItem item={item} deleteItem={deleteItem} />)}
+          <ListItem
+            item={item}
+            deleteItem={deleteItem} />)}
       />
     </View>
   );

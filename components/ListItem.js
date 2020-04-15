@@ -15,8 +15,11 @@ const styles = StyleSheet.create({
     listItem: {
         padding: 15,
         backgroundColor: '#ffecb3',
-        borderBottomWidth: 1,
         borderColor: '#fff2cc',
+        backgroundColor: '#ffe666',
+        borderColor: '#ffd966',
+        borderWidth: 4,
+        margin: 5,
     },
     listItemView: {
         flexDirection: 'row',
@@ -24,7 +27,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     listItemText: {
-        fontSize: 15,
+        fontSize: 25,
+        fontFamily: 'fantasy'
     }
 });
 

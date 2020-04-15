@@ -1,16 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-const Header = ({ title }) => {
+const Header = () => {
     return (
         <View style={styles.header}>
-            <Text style={styles.text}>{title}</Text>
+            <Image style={styles.img} source={require('../assets/butter.png')} />
         </View>
     );
-}
-
-Header.defaultProps = {
-    title: "Ike's task manager"
 }
 
 const styles = StyleSheet.create({
@@ -19,7 +15,9 @@ const styles = StyleSheet.create({
         padding: 15,
         backgroundColor: '#ffc312',
         borderBottomColor: '#ffd966',
-        borderBottomWidth: 4
+        borderBottomWidth: 4,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     text: {
         color: '#ffffff',
@@ -28,6 +26,10 @@ const styles = StyleSheet.create({
         fontFamily: 'fantasy',
         paddingTop: 60
 
+    },
+    img: {
+        height: 200,
+        width: 200,
     }
 })
 

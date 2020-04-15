@@ -11,32 +11,45 @@ const AddItem = ({ addItem }) => {
                 style={styles.input}
                 onChangeText={onChange}
                 value={text} />
-            <TouchableOpacity style={styles.btn}
-                onPress={() => {
-                    addItem(text);
-                    setText('');
-                }}>
-                <Text style={styles.btnText}>Add!</Text>
-            </TouchableOpacity>
-        </View >
+            <View style={styles.container}>
+                <TouchableOpacity style={styles.btn}
+                    onPress={() => {
+                        addItem(text);
+                        setText('');
+                    }}>
+                    <Text style={styles.btnText}>Add!</Text>
+                </TouchableOpacity>
+            </View >
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
+    container: {
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
     input: {
         height: 60,
         padding: 8,
         margin: 5,
     },
     btn: {
-        backgroundColor: '#c2bad8',
-        padding: 9,
+        backgroundColor: '#ffc312',
+        borderColor: '#ffd966',
+        borderWidth: 4,
+        padding: 20,
         margin: 5,
+        borderRadius: 25,
+        width: 100,
     },
     btnText: {
-        color: 'darkslateblue',
+        color: '#fff4cf',
         fontSize: 20,
+        fontFamily: 'fantasy',
         textAlign: 'center',
+        justifyContent: 'center',
+        fontWeight: 'bold'
     },
 });
 
